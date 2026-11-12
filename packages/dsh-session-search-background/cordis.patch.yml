@@ -1,0 +1,8 @@
+# dsh-session-search-background bundle patch：在宿主层插入「后台会话搜索」插件。
+#
+# 插件注册两个**新名字**工具（session_search_background / session_event_search_background）：
+# 不遮蔽官方同名工具，定义从官方工具 spread 后只换 name / description / execute（见 lib/index.js 头注释）。
+# 条目 id 固定 session-search-background（无设置段，不与 UI 绑定）。
+- insert:
+    - id: session-search-background
+      name: 'dsh-session-search-background'
